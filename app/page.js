@@ -5,6 +5,7 @@ import "./page.css";
 import {HeroOneImage} from "./components/heroSection/heroImage/heroImage"
 import {HeroOneText} from "./components/heroSection/heroText/heroText"
 import {HowItWorks} from "./components/howItWorks/howItWorks"
+import Link from "next/link"
 
 
 

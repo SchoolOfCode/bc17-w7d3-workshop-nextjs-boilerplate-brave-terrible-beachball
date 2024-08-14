@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Fireplace from '/public/hero-mobile.png'
 import React from 'react'
+import './heroImage.css'
 
 
 

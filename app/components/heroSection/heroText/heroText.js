@@ -1,4 +1,5 @@
 import React from 'react';
+import './heroText.css'
 
 export function HeroOneText(){
     const text = 

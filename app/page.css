@@ -6,62 +6,16 @@ body {
     padding: 1rem, 0.5rem;
 }
 
-h1{
-    font-size: 1.25rem;    
-}
-
-header {
-    padding-top: 0.1rem; 
-    padding-left: 0.3rem;
-}
-
-.heroImageContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.call-to-action{
-    background-color: rgba(255, 149, 0, 0.877);
-    padding: 0.3rem 1rem;
-
-}
-
-.call-to-action h2 {
-    font-size: 35px;
-}
-
-
-
 img {
     width: 375px;
 }
 
-.contact-number{
-    color:white;
-}
-
-
-.how-it-works {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    padding-top: 2rem;
-    font-size: 1rem;
-    font-weight: 400;
-}
 
 
 
-footer{
-   
-    background-color: rgb(213, 213, 213);
-    padding: 1rem;
-    text-decoration: none;
-}
 
-footer li{
 
-    list-style-type: none;
-}
+
+
+
+

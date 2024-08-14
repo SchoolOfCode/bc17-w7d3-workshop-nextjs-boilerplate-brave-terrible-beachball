@@ -1,0 +1,13 @@
+.call-to-action{
+    background-color: rgba(255, 149, 0, 0.877);
+    padding: 0.3rem 1rem;
+
+}
+
+.call-to-action h2 {
+    font-size: 35px;
+}
+
+.contact-number{
+    color:white;
+}
