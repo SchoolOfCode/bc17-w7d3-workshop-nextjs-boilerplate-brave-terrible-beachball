@@ -12,6 +12,7 @@ export function Header() {
        setMenuOpen(!menuOpen)
        console.log(menuOpen)
     }
+   
 
     return (
       <>
@@ -19,7 +20,11 @@ export function Header() {
         <div className="header">
               <h1>🔥 Fireplace Palace</h1>
               <button onClick={handleClick} className="menuButton">Menu</button>
-              
+              {menuOpen && 
+              <div>
+                HELLO WORLD
+              </div>
+              }
               </div>
           </header>
       </>
