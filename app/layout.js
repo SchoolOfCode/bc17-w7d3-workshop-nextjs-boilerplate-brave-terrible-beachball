@@ -12,29 +12,64 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={aleo.className}>{children}</body>
+      <body className={aleo.className}>
+      <Header />
+      {children}
+      <Footer />
+      </body>
     </html>
   );
 }
 
-function App() {
+export function Header() {
   return (
     <>
-    <html lang="en">
-      <body className={aleo.className}>
-        <Header/>
-        {/* <div className="wrapper">
-          <main> */}
-              {/* <HeroOne />
-              <HowItWorks /> */}
-              {children}
-          {/* </main> */}
-        {/* </div> */}
-        <Footer />
-</body>
-</html>
+    <header>
+      <div className="header">
+            <h1>🔥 Fireplace Palace</h1>
+            </div>
+        </header>
     </>
   )
 }
+
+export function Footer(){
+  return (
+  <>
+  <footer className="footer">
+    <div className="socialLinksList">
+      <p>Find us on</p>
+      <p>Facebook </p>
+      <p>Instagram </p>
+      <p>TikTok </p>
+      </div>
+      <div className="companyInfo">
+      <p> (C) Fireplace Palace 2024</p>
+      <p>info@firepalace.co.uk</p>
+      </div>
+  </footer>
+  </>
+  )
+}
+
+// function App() {
+//   return (
+//     <>
+//     <html lang="en">
+//       <body className={aleo.className}>
+//         <Header/>
+//         {/* <div className="wrapper">
+//           <main> */}
+//               {/* <HeroOne />
+//               <HowItWorks /> */}
+//               {children}
+//           {/* </main> */}
+//         {/* </div> */}
+//         <Footer />
+// </body>
+// </html>
+//     </>
+//   )
+// }
 
 // export default App
