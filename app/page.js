@@ -7,7 +7,9 @@ import "./page.css";
 export function HeroOneImage() {
   return (
     <>
-    <Image src={Fireplace} alt="fireplace image" />
+    <div className="heroImageContainer">
+    <Image src={Fireplace} alt="fireplace image" width={300} height={300} className="heroImage" />
+    </div>
     </> 
     )
 }

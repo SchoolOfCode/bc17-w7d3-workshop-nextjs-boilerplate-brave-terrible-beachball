@@ -15,6 +15,12 @@ header {
     padding-left: 0.3rem;
 }
 
+.heroImageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .call-to-action{
     background-color: rgba(255, 149, 0, 0.877);
     padding: 0.3rem 1rem;
@@ -26,11 +32,7 @@ header {
 }
 
 
-.how-it-works h2 {
-    padding-top: 2rem;
-    font-size: 35px;
-    font-weight: 400;
-}
+
 img {
     width: 375px;
 }
@@ -43,8 +45,14 @@ img {
 .how-it-works {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
+
+
 
 footer{
    
