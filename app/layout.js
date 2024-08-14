@@ -1,5 +1,7 @@
 import { Aleo } from "next/font/google";
 import "./globals.css";
+import {Footer} from "./components/footer/footer";
+import {Header} from "./components/header/header";
 
 
 const aleo = Aleo({ subsets: ["latin"] });
@@ -21,36 +23,9 @@ export default function RootLayout({ children }) {
   );
 }
 
-export function Header() {
-  return (
-    <>
-    <header>
-      <div className="header">
-            <h1>🔥 Fireplace Palace</h1>
-            </div>
-        </header>
-    </>
-  )
-}
 
-export function Footer(){
-  return (
-  <>
-  <footer className="footer">
-    <div className="socialLinksList">
-      <p>Find us on</p>
-      <p>Facebook </p>
-      <p>Instagram </p>
-      <p>TikTok </p>
-      </div>
-      <div className="companyInfo">
-      <p> (C) Fireplace Palace 2024</p>
-      <p>info@firepalace.co.uk</p>
-      </div>
-  </footer>
-  </>
-  )
-}
+
+
 
 // function App() {
 //   return (

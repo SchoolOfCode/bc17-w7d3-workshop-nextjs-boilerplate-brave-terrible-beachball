@@ -2,31 +2,12 @@ import Image from "next/image";
 import Fireplace from "/public/hero-mobile.png"
 import ArticleOne from "/public/how-it-works-1.png"
 import "./page.css";
+import {HeroOneImage} from "./components/heroSection/heroImage/heroImage"
+import {HeroOneText} from "./components/heroSection/heroText/heroText"
 
 
-export function HeroOneImage() {
-  return (
-    <>
-    <div className="heroImageContainer">
-    <Image src={Fireplace} alt="fireplace image" width={300} height={300} className="heroImage" />
-    </div>
-    </> 
-    )
-}
 
-export function HeroOneText(){
-  const text = 
-    {heading: "Discover the perfect fireplace ...", 
-      subHeading: "Book consultation:", 
-      contactNumber: "0121 345 6789"}
-  return (
-    <>
-  <div className="call-to-action">
-                    <h2>{text.heading}</h2>
-                    <p>{text.subHeading}<span className="contact-number">{text.contactNumber}</span></p>
-                </div>
-                </> )
-}
+
 
 export function HowItWorks(){
   const articleList = [
