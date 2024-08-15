@@ -3,14 +3,18 @@ h1{
 }
 
 header {
+    background-color: bisque;
     padding-top: 0.1rem; 
     padding-left: 0.3rem;
+    /* display: flex; */
+    /* flex-direction:row;
+    justify-content: space-between; */
 }
 
 .menuIcon {
     height: 20px;
     width: 20px;
-    
+    justify-content: flex-end;
 }
 
 button {
