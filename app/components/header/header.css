@@ -6,3 +6,37 @@ header {
     padding-top: 0.1rem; 
     padding-left: 0.3rem;
 }
+
+.menuIcon {
+    height: 20px;
+    width: 20px;
+    
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+
+.menu {
+    background-color: orange;
+    height: 100vh;
+    list-style-type: none;
+    font-size: 40px;
+    text-align: right;
+    padding: 50px;
+}
+
+li {
+    margin-top: 45px; 
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

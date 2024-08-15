@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Founders() {
-    return <h1>Founders</h1>
+    return <h1>Welcome to YogaNidra</h1>
 }
 
 export default Founders;

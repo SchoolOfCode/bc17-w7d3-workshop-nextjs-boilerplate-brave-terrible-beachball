@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import './header.css'
+import './header.css';
+import Image from "next/image";
 
 export function Header() {
 
@@ -19,10 +20,15 @@ export function Header() {
       <header>
         <div className="header">
               <h1>🔥 Fireplace Palace</h1>
-              <button onClick={handleClick} className="menuButton">Menu</button>
+              <button onClick={handleClick} className="menuButton">
+              <Image src="/menu-open-button.png" alt="menu open icon" width={20} height={20} className="menuIcon" />
+                </button>
               {menuOpen && 
               <div>
-                HELLO WORLD
+                <menu className="menu">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/founders">Founders</a></li>
+                </menu>
               </div>
               }
               </div>
