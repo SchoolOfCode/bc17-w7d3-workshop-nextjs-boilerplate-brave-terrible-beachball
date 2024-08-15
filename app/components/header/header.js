@@ -17,21 +17,23 @@ export function Header() {
 
     return (
       <>
-      <header>
-        <div className="header">
+      <header className="header">
+        
               <h1>🔥 Fireplace Palace</h1>
               <button onClick={handleClick} className="menuButton">
               <Image src="/menu-open-button.png" alt="menu open icon" width={20} height={20} className="menuIcon" />
                 </button>
-              {menuOpen && 
+              {menuOpen ? 
               <div>
                 <menu className="menu">
                   <li><a href="/">Home</a></li>
                   <li><a href="/founders">Founders</a></li>
                 </menu>
               </div>
+              :
+        
               }
-              </div>
+          
           </header>
       </>
     )
