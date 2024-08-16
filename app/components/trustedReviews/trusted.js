@@ -22,7 +22,7 @@ export function TrustedReviews(){
     <>
     <section className="trusted">
         <h2>Trusted.</h2>
-        <hr/>
+        <hr />
         <p>We've got thousands of happy customers all over the UK. Choose your country to see the lastest review:</p>
         <br></br>
         <div className="button-container">

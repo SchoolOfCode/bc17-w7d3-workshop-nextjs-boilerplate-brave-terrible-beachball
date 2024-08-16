@@ -4,9 +4,9 @@
     text-align: center;
 }
 
-.trusted hr {
+/* .trusted hr {
     border: 20px solid black;
-}
+} */
 
 .button-container {
     display: flex;
@@ -21,4 +21,9 @@
     height: 50px;
     width: 100px;
     border-radius: 5px;
+}
+
+hr {
+    border: 1px solid rgb(207, 205, 205);     
+    width: 50%;               
 }
