@@ -38,7 +38,6 @@ export function TrustedReviews(){
             <div className="review-container">
                 <p className="review-text">{reviewData.text}</p>
                 <p className="review-metadata">{reviewData.author} - {reviewData.location}</p>
-
             </div> :
             ""
         }
