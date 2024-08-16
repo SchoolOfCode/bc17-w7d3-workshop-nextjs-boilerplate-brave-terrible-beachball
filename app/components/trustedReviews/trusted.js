@@ -4,13 +4,15 @@ import "./trusted.css";
 
 export function TrustedReviews(){
 
-    const [selectedCountry, setSelectedCountry] = useState('null');
-    const [reviewData, setReviewData] = useState('null');
+    const [selectedCountry, setSelectedCountry] = useState(null);
+    const [reviewData, setReviewData] = useState(null);
 
     console.log(reviewData);
 
     useEffect(() => {
-
+        fetch(`https://seal-app-336e8.ondigitalocean.app/reviews?country=${selectedCountry}`)
+        .then(response => response.json())
+        .then(data => setReviewData(data));
 
     }, [selectedCountry])
 
@@ -30,7 +32,16 @@ export function TrustedReviews(){
          <button onClick={() => setCountry('wales')}>Wales</button>
          <button onClick={() => setCountry('england')}>England</button>
         </div>
-        <p>{selectedCountry}</p>
+        <br></br>
+       
+            {reviewData ?  
+            <div className="review-container">
+                <p className="review-text">{reviewData.text}</p>
+                <p className="review-metadata">{reviewData.author} - {reviewData.location}</p>
+
+            </div> :
+            ""
+        }
     </section>
     </>
 
