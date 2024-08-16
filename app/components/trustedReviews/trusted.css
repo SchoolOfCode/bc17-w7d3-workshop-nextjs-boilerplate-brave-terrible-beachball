@@ -1,0 +1,24 @@
+.trusted {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.trusted hr {
+    border: 20px solid black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+
+} 
+
+.trusted button {
+    background-color: grey;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+}
