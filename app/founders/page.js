@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Founders() {
-    return 
+    return (
     <>
     <h1>About Founders</h1>
     <p>
@@ -13,6 +13,7 @@ At Fireplace Palace, we pride ourselves on our attention to detail, innovative d
 <br></br>
 We invite you to explore our portfolio, learn about our process, and discover how we can bring your dream fireplace to life. Join us on this journey as we continue to create masterpieces—one bespoke fireplace at a time.</p>
     </>
+    )
 }
 
 export default Founders;
