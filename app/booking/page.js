@@ -1,12 +1,14 @@
 import React from 'react';
+import './booking.css'
 
 function Booking() {
     return (
     <>
     <h1>Design Booking</h1>
-    <form>
-        <fieldset>
-            <legend>Personal Information:</legend>
+    <form class="contactForm">
+    <h3>Personal Information:</h3>
+        <fieldset class="formFieldset">
+            
             <label>Full Name
                 <input type="text"></input>
             </label>
@@ -20,8 +22,9 @@ function Booking() {
                 <input type="text"></input>
             </label>
         </fieldset>
-        <fieldset>
-            <legend>Contact Information:</legend>
+        <h3>Contact Information:</h3>
+        <fieldset class="formFieldset">
+            
             <label>Phone Number
                 <input type="text"></input>
             </label>

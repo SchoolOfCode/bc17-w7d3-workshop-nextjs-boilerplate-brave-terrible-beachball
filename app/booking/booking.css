@@ -1,0 +1,43 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contactForm h3 {
+    display: flex;
+    align-items: left;
+    margin-left: 1.5rem;
+}
+
+.contactForm fieldset {
+    display: flex;
+    align-items: center;
+}
+
+
+.formFieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        background-color: rgb(213, 213, 213);
+        width: 80%;
+        margin: 1rem;
+        border-radius: 10px;
+       
+
+}
+
+.formFieldset label {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: none;
+    background-color: rgb(213, 213, 213);
+    width: 80%;
+    margin: 1rem;
+   
+
+}
+
