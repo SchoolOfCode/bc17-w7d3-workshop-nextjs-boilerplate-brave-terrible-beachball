@@ -5,49 +5,22 @@ import './booking.css'
 function Booking() {
 
 
-    const [ fullName, setFullName ] = useState("")
-    const [ postcode, setPostcode ] = useState("")
-    const [ firstLineAddress, setFirstLineAddress ] = useState("")
-    const [ city, setCity ] = useState("")
-    const [ phoneNumber, setPhoneNumber ] = useState("")
-    const [ email, setEmail ] = useState("")
+    const [ formData, setFormData ] = useState({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
     
     
     const handleChange = (event) => {
-        if (event.target.name === "fullName"){
-            setFullName(event.target.value)
-        }
 
-        if (event.target.name === "postcode"){
-            setPostcode(event.target.value)
-        }
-        if (event.target.name === "firstLineAddress"){
-            setFirstLineAddress(event.target.value)
-        }
-        if (event.target.name === "city"){
-            setCity(event.target.value)
-        }
-        if (event.target.name === "phoneNumber"){
-            setPhoneNumber(event.target.value)
-        }
-        if (event.target.name === "email"){
-            setEmail(event.target.value)
-        }
+        const {name, value} = event.target;
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
         
     }
 
 
     const handleSubmit = (event) => {
-        console.log("Hello");
         event.preventDefault();
-        console.log({fullName, postcode, firstLineAddress, city, phoneNumber, email});
+        console.log(formData);
+        setFormData({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
 
-        setFullName("");
-        setPostcode("");
-        setFirstLineAddress("");
-        setCity("");
-        setPhoneNumber("");
-        setEmail("");
     }
 
     
@@ -67,7 +40,7 @@ function Booking() {
                 <input 
                 type="text" 
                 name="fullName" 
-                value={fullName}
+                value={formData.fullName}
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
@@ -75,7 +48,7 @@ function Booking() {
                 <input 
                 type="text" 
                 name="postcode"
-                value={postcode}
+                value={formData.postcode}
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
@@ -83,7 +56,7 @@ function Booking() {
                 <input 
                 type="text" 
                 name="firstLineAddress" 
-                value={firstLineAddress}
+                value={formData.firstLineAddress}
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
@@ -91,7 +64,7 @@ function Booking() {
                 <input 
                 type="text"
                 name="city" 
-                value={city} 
+                value={formData.city} 
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
@@ -103,7 +76,7 @@ function Booking() {
                 <input 
                 type="text" 
                 name="phoneNumber" 
-                value={phoneNumber}
+                value={formData.phoneNumber}
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
@@ -111,7 +84,7 @@ function Booking() {
                 <input 
                 type="text" 
                 name="email" 
-                value={email}
+                value={formData.email}
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
