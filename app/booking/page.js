@@ -5,7 +5,13 @@ import './booking.css'
 function Booking() {
 
 
-    const [ formData, setFormData ] = useState({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
+    const initialState ={ data: {
+        fullName:""
+    }, 
+    errorStatus: false
+    };
+
+    const [ formData, setFormData ] = useState({fullName:""})
     const [error, setError] = useState(false)
     
     const handleChange = (event) => {
@@ -18,7 +24,7 @@ function Booking() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!formData.fullName || !formData.postcode || !formData.firstLineAddress || !formData.city || !formData.phoneNumber || !formData.email)  {
+        if (!formData.fullName)  {
             setError(true);
             return;
         }
@@ -31,7 +37,7 @@ function Booking() {
 
 
         console.log(formData);
-        setFormData({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
+        setFormData({fullName:""})
 
     
 }
@@ -56,50 +62,11 @@ function Booking() {
                 onChange={(event) => handleChange(event)}>
                 </input>
             </label>
-            <label>Postcode
-                <input 
-                type="text" 
-                name="postcode"
-                value={formData.postcode}
-                onChange={(event) => handleChange(event)}>
-                </input>
-            </label>
-            <label>House/Flat Number and Street Name
-                <input 
-                type="text" 
-                name="firstLineAddress" 
-                value={formData.firstLineAddress}
-                onChange={(event) => handleChange(event)}>
-                </input>
-            </label>
-            <label>City
-                <input 
-                type="text"
-                name="city" 
-                value={formData.city} 
-                onChange={(event) => handleChange(event)}>
-                </input>
-            </label>
+
         </fieldset>
         <h3>Contact Information:</h3>
         <fieldset className="formFieldset">
-            
-            <label>Phone Number
-                <input 
-                type="text" 
-                name="phoneNumber" 
-                value={formData.phoneNumber}
-                onChange={(event) => handleChange(event)}>
-                </input>
-            </label>
-            <label>Email Address
-                <input 
-                type="text" 
-                name="email" 
-                value={formData.email}
-                onChange={(event) => handleChange(event)}>
-                </input>
-            </label>
+
         </fieldset>
         { error && <p>Error</p> }
 
