@@ -6,7 +6,7 @@ function Booking() {
 
 
     const [ formData, setFormData ] = useState({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
-    
+    const [error, setError] = useState(false)
     
     const handleChange = (event) => {
 
@@ -18,11 +18,23 @@ function Booking() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        if (!formData.fullName || !formData.postcode || !formData.firstLineAddress || !formData.city || !formData.phoneNumber || !formData.email)  {
+            setError(true);
+            return;
+        }
+
+        if (error) {
+            setError(false);
+        }
+
+
+
+
         console.log(formData);
         setFormData({fullName:"", postcode:"", firstLineAddress:"", city:"", phoneNumber:"", email:""})
 
-    }
-
+    
+}
     
 
     
@@ -89,10 +101,13 @@ function Booking() {
                 </input>
             </label>
         </fieldset>
+        { error && <p>Error</p> }
+
         <button type="submit" value="submit">Submit</button>
     </form>
     </> 
     )
-}
+
+    }
 
 export default Booking;
