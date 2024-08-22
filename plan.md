@@ -9,11 +9,11 @@ If there is no error then console log the form data 🙂 (don't worry about post
 
 1. Check everyone understands the basics of using useReducer. ✅
 
-2. Move your code over to useReducer. Do not add a single new feature to begin with. It's not easy moving to reducer, don't make it harder.
+2. Move your code over to useReducer. Do not add a single new feature to begin with. It's not easy moving to reducer, don't make it harder.✅
 
-3. Once the form does exactly what it did before but using useReducer - move on to add some of the new functionality like a loading indicator into your state. You can make the handle submit dispatch an action to say the form is submitting, then simulate waiting for 2 seconds (useTimeout maybe), then dispatch another action to say form submitted successfully.
+3. Once the form does exactly what it did before but using useReducer - move on to add some of the new functionality like a loading indicator into your state. You can make the handle submit dispatch an action to say the form is submitting, then simulate waiting for 2 seconds (useTimeout maybe), then dispatch another action to say form submitted successfully. ✅
 
-4. Now continue to add more features ... like disabling the form while it's submitting, or more granular errors.
+4. Now continue to add more features ... like disabling the form while it's submitting, or more granular errors. ❌
 
 # OBJECTIVES
 
