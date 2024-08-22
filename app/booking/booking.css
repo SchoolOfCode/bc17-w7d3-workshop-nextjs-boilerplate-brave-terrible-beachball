@@ -1,3 +1,8 @@
+.design-booking {
+    background-color: orange;
+    padding: 30px;
+    font-size: 2rem;
+}
 .contactForm {
     display: flex;
     flex-direction: column;
@@ -44,6 +49,22 @@
     color: red;
 }
 
-submit{
-    display: block
+.submit-button {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    margin-bottom: 20px;
+    margin-left: 1.5rem;
+    margin-right: 2.5rem;
+}
+
+.submit-button button {
+    background-color: orange;
+    padding: 10px;
+    
+}
+
+.update-msg p {
+    display: flex;
+    justify-content: center;
 }

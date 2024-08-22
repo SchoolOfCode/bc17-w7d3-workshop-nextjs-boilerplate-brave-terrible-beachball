@@ -48,11 +48,11 @@ function Booking() {
           status: "success",
         };
 
-      case "FORM_OVER_DONE_CANNOT_TYPE":
-        return {
-          ...state,
-          status: "overdone",
-        };
+      // case "FORM_OVER_DONE_CANNOT_TYPE":
+      //   return {
+      //     ...state,
+      //     status: "overdone",
+      //   };
 
       case "RESET_FORM":
         return initialState;
@@ -105,7 +105,7 @@ function Booking() {
 
   return (
     <>
-      <h1>Design Booking</h1>
+      <h1 className="design-booking">Design Booking</h1>
       <form className="contactForm" onSubmit={handleSubmit}>
         <h3>Personal Information:</h3>
         <fieldset className="formFieldset">
@@ -166,11 +166,15 @@ function Booking() {
             </label>
 
         </fieldset>
+        <div className="update-msg">
         {state.status === "error" && <p className={styles.error} style={{color:"red"}} >Error!</p>}
-
-        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" || "success" ? "Submitted" : "Submit"|| "editing" ? "Submit" : "Submit" }
+      <div className="submit-button">
+        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" ||  "editing" ? "Submit" : "Submit" }
           
         </button>
+         </div>
+         {state.status === "success" && <p className={styles.success} style={{color:"green"}} >Submitted!</p>}
+     </div>
       </form>
     </>
   );

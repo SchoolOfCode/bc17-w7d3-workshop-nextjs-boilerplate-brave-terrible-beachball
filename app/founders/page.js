@@ -1,18 +1,28 @@
 import React from 'react';
+import Image from 'next/image'
+import MikeMandy from '/public/founder-mike-and-mandy.png'  
+import Founders1 from '/public/founders-1.png'
+import Founders2 from '/public/founders-2.png'
+import Founders3 from '/public/founders-3.png'
 
 function Founders() {
     return (
     <>
-    <h1>About Founders</h1>
-    <p>
-Welcome to Fireplace Palace, where craftsmanship meets luxury. We are Mike and Mandy, the founders of Fireplace Palace, dedicated to creating bespoke, high-end fireplaces that transform spaces into elegant sanctuaries. Our journey began with a shared passion for design and an unwavering commitment to quality.
-<br></br>
-Mike brings years of expertise in [relevant expertise, e.g., engineering, design, or architecture], while Mandy excels in [her expertise, e.g., creative direction, client relations, or project management]. Together, we craft fireplaces that are not just functional but also stunning centerpieces, tailored to reflect the unique style and vision of each client.
-<br></br>
-At Fireplace Palace, we pride ourselves on our attention to detail, innovative designs, and the personalized experience we offer every client. Our bespoke fireplaces are more than just features; they are works of art, meticulously crafted to elevate any space.
-<br></br>
-We invite you to explore our portfolio, learn about our process, and discover how we can bring your dream fireplace to life. Join us on this journey as we continue to create masterpieces—one bespoke fireplace at a time.</p>
-    </>
+    <div className="michael-and-amanda">
+    <h1>Meet the artisans behind our masterpieces!</h1>
+    <h1>Mike and Mandy</h1>
+    <Image src={MikeMandy} alt="mnm" width="300" height="300" className="mnm"/>
+    </div>
+    <h2>Our craftsmanship</h2>
+    <p>Mike and Mandy studied and honed their craft under the fireplace sensei Vik Von Blaze. Nothing gets delivered to a customer without their sign off.</p>
+    <Image src={Founders1} alt="f1" width="300" height="300" className="f1"/>
+    <h2>Our experience</h2>
+    <p>Numbers don't lie - we've been around for 204 years and have a long list of happy customers who gladly recommend us.</p>
+    <Image src={Founders2} alt="f2" width="300" height="300" className="f2"/>
+    <h2> Our guarantee</h2>
+    <p>If you're not 100% satisfied we will fully refund your purchase. Also, we offer free repairs for the first 20 years of ownership. Find that somewhere else!</p>
+    <Image src={Founders3} alt="f3" width="300" height="300" className="f3"/>
+</>
     )
 }
 
