@@ -1,16 +1,19 @@
 'use client';
 import React, { useState, useReducer} from 'react';
-import './booking.css'
+import styles from './booking.css'
 
 const initialState ={ data: {
     fullName:'',
     postcode:''
 },
-errorStatus: false
+   status: "editing"
 };
+
+
 function Booking() {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const [error, setError] = useState(false);
+
+    console.log(state);
     
     function reducer(state, action) {
         switch (action.type) {
@@ -22,15 +25,35 @@ function Booking() {
                 [action.payload.name]: action.payload.value
               }
             };
+
+          case "ERROR":
+            return {
+              ...state,
+              status: "error"
+          }
+
+          case "FORM_SUBMITTING":
+            return {
+                ...state,
+                status: "submitting"
+            };
+
+          case "FORM_SUCCESS":
+            return {
+                ...state,
+                status: "success"
+            };
+
           case "RESET_FORM":
             return initialState;
+
           default:
             return state;
         }
       }
       
       function handleFormFieldChange(event) {
-        if (event.target.name === 'fullName') {
+        
             dispatch({
               type: 'CHANGE_FORM_DATA',
               payload: {
@@ -38,23 +61,40 @@ function Booking() {
                 value: event.target.value // new value
               }
             });
-        }
+        
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!state.data.fullName) {
-          setError(true);
-          return;
-        }
-        if (error) {
-          setError(false);
-        }
-        console.log(state.data);
-        // Reset the form
         dispatch({
-          type: "RESET_FORM"
+          type: "FORM_SUBMITTING"
+      });
+
+      setTimeout(() => {
+
+        if (!state.data.fullName || !state.data.postcode) {
+          dispatch({
+            type: "ERROR",
         });
+        return;
+      }
+  
+        console.log(state.data);
+        dispatch({
+          type: "FORM_SUCCESS"
+      });
+
+      console.log("Data!!!!!!");
+
+      }, 2000);
+    
+        // Reset the form
+        // dispatch({
+        //   type: "RESET_FORM"
+        // });
       };
+
+    
+
     return (
     <>
     <h1>Design Booking</h1>
@@ -69,11 +109,19 @@ function Booking() {
   onChange={(event) => handleFormFieldChange(event)}
 />
             </label>
+            <label>Postcode
+                <input 
+                type="text" 
+                name="postcode"
+                value={state.data.postcode}
+                onChange={(event) => handleFormFieldChange(event)}>
+                </input>
+            </label>
         </fieldset>
         <h3>Contact Information:</h3>
         <fieldset className='formFieldset'>
         </fieldset>
-        { error && <p>Error</p> }
+        { state.status === "error" && <p className={styles.error}>Error</p> }
         <button type='submit' value='submit'>Submit</button>
     </form>
     </>
