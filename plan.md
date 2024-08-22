@@ -17,7 +17,7 @@ If there is no error then console log the form data 🙂 (don't worry about post
 
 # OBJECTIVES
 
-As a user when I submit the form it should  show me that it is submitting.
+As a user when I submit the form it should  show me that it is submitting. 
 
 As a user I should not be able to submit again while it is submitting.
 

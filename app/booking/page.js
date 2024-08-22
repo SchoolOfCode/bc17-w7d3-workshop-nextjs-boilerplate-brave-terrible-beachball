@@ -6,6 +6,10 @@ const initialState = {
   data: {
     fullName: "",
     postcode: "",
+    firstLineAddress: "",
+    city: "",
+    phoneNumber: "",
+    email: ""
   },
   status: "editing",
 };
@@ -74,7 +78,7 @@ function Booking() {
     });
 
     setTimeout(() => {
-      if (!state.data.fullName || !state.data.postcode) {
+      if (!state.data.fullName || !state.data.postcode || !state.data.firstLineAddress || !state.data.city || !state.data.phoneNumber || !state.data.email) {
         dispatch({
           type: "ERROR",
         });
@@ -162,9 +166,10 @@ function Booking() {
             </label>
 
         </fieldset>
-        {state.status === "error" && <p className={styles.error}>Error</p>}
-        <button type="submit" value="submit">
-          Submit
+        {state.status === "error" && <p className={styles.error} style={{color:"red"}} >Error!</p>}
+
+        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" || "success" ? "Submitted" : "Submit"|| "editing" ? "Submit" : "Submit" }
+          
         </button>
       </form>
     </>
