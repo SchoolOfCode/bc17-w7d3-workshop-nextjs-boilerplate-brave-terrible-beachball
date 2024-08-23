@@ -90,17 +90,13 @@ function Booking() {
         type: "FORM_SUCCESS",
       });
 
-      dispatch({
-        type: "FORM_OVER_DONE_CANNOT_TYPE",
-      });
-
       console.log("Data!!!!!!");
     }, 2000);
 
     // Reset the form
-    // dispatch({
-    //   type: "RESET_FORM"
-    // });
+    dispatch({
+      type: "RESET_FORM"
+    });
   };
 
   return (
@@ -169,7 +165,7 @@ function Booking() {
         <div className="update-msg">
         {state.status === "error" && <p className={styles.error} style={{color:"red"}} >Error!</p>}
       <div className="submit-button">
-        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" ||  "editing" ? "Submit" : "Submit" }
+        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Book Design Consultation" ||  "editing" ? "Book Design Consultation" : "Book Design Consultation" }
           
         </button>
          </div>

@@ -1,0 +1,26 @@
+.michael-and-amanda {
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.michael-and-amanda h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.mnm {
+    display: flex;
+    justify-content: center;
+    width: 325px;
+    height: 325px;
+}
+
+.picture-text h2{ 
+    font-weight: 300;
+}
+.picture-text p{
+    font-weight: 300;
+}
