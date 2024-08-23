@@ -91,7 +91,7 @@ function Booking() {
       });
 
       console.log("Data!!!!!!");
-    }, 5000);
+    }, 100);
 
     // Reset the form
   //   dispatch({
