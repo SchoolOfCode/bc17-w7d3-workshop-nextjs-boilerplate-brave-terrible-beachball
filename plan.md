@@ -28,7 +28,9 @@ As a user when I submit the form in an incorrect way I should see that the form 
 As a user who has incorrectly submitted the form I should see an error under each field that has failed validation. The error should be specific to the field ("Not a valid phone number", "No bookings outside of England, Wales or Scotland").
 
 TESTATHON PLAN
-1. Founders Page and Design Booking CSS tweaking
+1. Founders Page and Design Booking CSS tweaking ✅
 -
 2. Playwright
--
+-review text pop up test
+-error test for form
+-success form submit

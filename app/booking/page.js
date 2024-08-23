@@ -91,12 +91,12 @@ function Booking() {
       });
 
       console.log("Data!!!!!!");
-    }, 2000);
+    }, 5000);
 
     // Reset the form
-    dispatch({
-      type: "RESET_FORM"
-    });
+  //   dispatch({
+  //     type: "RESET_FORM"
+  //   });
   };
 
   return (
@@ -165,7 +165,7 @@ function Booking() {
         <div className="update-msg">
         {state.status === "error" && <p className={styles.error} style={{color:"red"}} >Error!</p>}
       <div className="submit-button">
-        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" ||  "editing" ? "Submit" : "Submitting..." }
+        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" ||  "editing" ? "Submit" : "Submit" }
           
         </button>
          </div>
