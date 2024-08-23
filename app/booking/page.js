@@ -165,7 +165,7 @@ function Booking() {
         <div className="update-msg">
         {state.status === "error" && <p className={styles.error} style={{color:"red"}} >Error!</p>}
       <div className="submit-button">
-        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Book Design Consultation" ||  "editing" ? "Book Design Consultation" : "Book Design Consultation" }
+        <button type="submit" value="submit" className={styles.button}> {state.status ===  "submitting" ? "Submitting..." : "Submit" ||  "editing" ? "Submit" : "Submitting..." }
           
         </button>
          </div>
