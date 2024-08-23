@@ -11,7 +11,6 @@ test('review text test', async ({ page }) => {
     await page.goto('http://localhost:3000/');
     await page.getByRole('button', { name: 'Scotland' }).click();
     //assert
-    await expect(page.getByRole('p', { name: 'review-text' })).toBeVisible();
-
-}
-)
+    const reviewText = page.getByText("We couldn't be happier with our new fireplace");
+    await expect(reviewText).toBeVisible();
+  } );
